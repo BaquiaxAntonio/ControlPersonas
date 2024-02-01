@@ -44,6 +44,7 @@
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelEdad = new System.Windows.Forms.Label();
+            this.Salir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +118,7 @@
             // 
             // ButtonIngresar
             // 
-            this.ButtonIngresar.Location = new System.Drawing.Point(28, 226);
+            this.ButtonIngresar.Location = new System.Drawing.Point(17, 226);
             this.ButtonIngresar.Name = "ButtonIngresar";
             this.ButtonIngresar.Size = new System.Drawing.Size(158, 23);
             this.ButtonIngresar.TabIndex = 8;
@@ -168,7 +169,7 @@
             // 
             // buttonMostrar
             // 
-            this.buttonMostrar.Location = new System.Drawing.Point(309, 226);
+            this.buttonMostrar.Location = new System.Drawing.Point(181, 226);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(132, 23);
             this.buttonMostrar.TabIndex = 13;
@@ -178,7 +179,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(309, 256);
+            this.button1.Location = new System.Drawing.Point(319, 226);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 23);
             this.button1.TabIndex = 14;
@@ -196,11 +197,21 @@
             this.labelEdad.Text = "edad";
             this.labelEdad.Visible = false;
             // 
+            // Salir
+            // 
+            this.Salir.Location = new System.Drawing.Point(457, 226);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(75, 23);
+            this.Salir.TabIndex = 16;
+            this.Salir.Text = "Salir";
+            this.Salir.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 332);
+            this.Controls.Add(this.Salir);
             this.Controls.Add(this.labelEdad);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonMostrar);
@@ -219,6 +230,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +254,7 @@
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelEdad;
+        private System.Windows.Forms.Button Salir;
     }
 }
 

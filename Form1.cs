@@ -67,7 +67,7 @@ namespace ControlPersonas
             labelNombre.Text = persona.Nombre;
             labelApellido.Text = persona.Apellido;
             labelFecha.Text=persona.FechaNacimiento.ToShortDateString ();
-            labelEdad.Text = persona.edad().ToString ();
+            labelEdad.Text = persona.edad().ToString() +" Años";
 
             labelDpi.Visible = true;
             labelNombre.Visible = true;
@@ -84,6 +84,16 @@ namespace ControlPersonas
             persona.Nombre = labelNombre.Text;
             persona.Apellido = labelApellido.Text;
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

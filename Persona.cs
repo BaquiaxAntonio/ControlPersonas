@@ -43,17 +43,18 @@ namespace ControlPersonas
         {
             if (nombre.Length > 0)
             {
+                nombre = Regex.Replace(nombre, @"[^a-zA-Z]", "");
                 StringBuilder NombreMayuscula = new StringBuilder(nombre);
                 NombreMayuscula[0] = char.ToUpper(NombreMayuscula[0]);
                 nombre = NombreMayuscula.ToString();
-                nombre = Regex.Replace(nombre, @"[^a-zA-Z]", "");
             }
             if (apellido.Length > 0)
             {
+                apellido = Regex.Replace(apellido, @"[^a-zA-Z]", "");
                 StringBuilder apellidoMayuscula = new StringBuilder(apellido);
                 apellidoMayuscula[0] = char.ToUpper(apellidoMayuscula[0]);
                 apellido = apellidoMayuscula.ToString();
-                apellido = Regex.Replace(apellido, @"[^a-zA-Z]", "");
+                
             }
         }
 
@@ -69,8 +70,11 @@ namespace ControlPersonas
             int añoActual = DateTime.Now.Year;
             int diaActual = DateTime.Now.Day;
 
-
-            if ((diaActual >= diaNacimiento) && (mesActual >= mesNacimiento))
+            if (mesActual > mesNacimiento)
+            {
+                edad = (añoActual - añoNacimiento);
+            }
+            else if ((diaActual >= diaNacimiento) && (mesActual >= mesNacimiento))
             {
                 edad = añoActual - añoNacimiento;
             }
